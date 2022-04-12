@@ -8,6 +8,7 @@ public class TankController : MonoBehaviour
     public float m_Speed = 12f;
     public float m_TurnSpeed = 180f;
     public float m_WheelRotateSpeed = 90f;
+    public float m_turretDelaySpeed = 1.2f;
 
     private Rigidbody m_Rigidbody;              // Reference used to move the tank.
     private string m_MovementAxisName;          // The name of the input axis for moving forward and back.
@@ -22,6 +23,8 @@ public class TankController : MonoBehaviour
 
 
     private float turn;
+    private Vector3 tankToMouseWithDelay;
+    
 
 
 
@@ -57,6 +60,7 @@ public class TankController : MonoBehaviour
         m_MovementAxisName = "Vertical";
         m_TurnAxisName = "Horizontal";
         turn = 0;
+        
 
     }
 
@@ -127,9 +131,9 @@ public class TankController : MonoBehaviour
             // Get direction and rotate based if movement is forward or backward
             // When tank moves forward, the wheels should rotate forward; When tank moves backwards, the wheels should rotate backwards.
             if (m_MovementInputValue < 0)
-                turn += (-1)* Time.deltaTime * 75.0f; // random speed, could be anything else
+                turn += (-1)* Time.deltaTime * m_WheelRotateSpeed; 
             else
-                turn += Time.deltaTime * 75.0f;
+                turn += Time.deltaTime * m_WheelRotateSpeed;
 
 
             if (turn > 360.0f)
@@ -171,8 +175,11 @@ public class TankController : MonoBehaviour
             // Otherwise the turret will also rotate up and down and clip into the body of the tank
             tankToMouse.y = 0;
 
+            // Creating delay so the movement is smooth
+            // As seen here: https://www.youtube.com/watch?v=2FF9S02P-q0&t=21s&ab_channel=Indie-Pixel
+            tankToMouseWithDelay = Vector3.Lerp(tankToMouseWithDelay, tankToMouse, Time.deltaTime * m_turretDelaySpeed);
 
-            m_turret.transform.rotation = Quaternion.LookRotation(tankToMouse);
+            m_turret.transform.rotation = Quaternion.LookRotation(tankToMouseWithDelay);
         }
     }
 }
