@@ -413,4 +413,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f30090f98264cf4da9072bd16582ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionParticlesPrefab: {fileID: 0}
+  explosionParticlesPrefab: {fileID: 4593887264531310174, guid: 182fc1012d90d4b4096447ddf134126b,
+    type: 3}
