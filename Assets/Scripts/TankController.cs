@@ -164,7 +164,15 @@ public class TankController : MonoBehaviour
         // Perform the raycast and if it hits something on the floor layer...
         if (Physics.Raycast(camRay, out floorHit, camRayLength, floorMask))
         {
-            // Your code here.
+            // Create a vector from the turret to the point on the floor the raycast from the mouse hit.
+            Vector3 tankToMouse = floorHit.point - m_turret.transform.position;
+
+            // The turret should rotate with y value to be 0
+            // Otherwise the turret will also rotate up and down and clip into the body of the tank
+            tankToMouse.y = 0;
+
+
+            m_turret.transform.rotation = Quaternion.LookRotation(tankToMouse);
         }
     }
 }
