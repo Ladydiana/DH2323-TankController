@@ -3,16 +3,16 @@
 
 ## Screenshots
 ### Tank
-![alt text](https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Tank%20Translation.gif)
-![alt text](https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Tank%20Rotation.gif)
-![alt text](https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Turret%20Rotation.gif)
+<img src="https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Tank%20Translation.gif" width="350" height="250"> <img src="https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Tank%20Rotation.gif" width="350" height="250"> <img src="https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Turret%20Rotation.gif" width="350" height="250">
+
 ### Bullet
-![alt text](https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Bullet%20Front.gif)
-![alt text](https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Bullet%20Side.gif)
+<img src="https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Bullet%20Front.gif" width="350" height="250"> <img src="https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Bullet%20Side.gif" width="350" height="250">
+
 ### Fireplace
-![alt text](https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Fireplace.gif)
+<img src="https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Fireplace.gif" width="350" height="300"> 
+
 ### Fountain
-![alt text](https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Fountain.gif)
+<img src="https://github.com/Ladydiana/DH2323-TankController/blob/main/Screenshots/Fountain.gif"  width="350" height="300"> 
 
 
 ## Version
